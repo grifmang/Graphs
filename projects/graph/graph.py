@@ -13,6 +13,7 @@ class Graph:
         """
         Add a vertex to the graph.
         """
+        # for first commit
         pass  # TODO
 
     def add_edge(self, v1, v2):

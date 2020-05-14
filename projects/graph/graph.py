@@ -84,6 +84,8 @@ class Graph:
             visited.add(v)
             for next_vert in self.get_neighbors(v):
                 s.push(self.dft_recursive(next_vert, visited))
+        
+        return v
             
 
     def bfs(self, starting_vertex, destination_vertex):
@@ -108,6 +110,7 @@ class Graph:
                     new_path = path[:]
                     new_path.append(new_vert)
                     q.enqueue(new_path)
+        return visited
 
     def dfs(self, starting_vertex, destination_vertex):
         """
@@ -129,6 +132,7 @@ class Graph:
                     new_path = path[:]
                     new_path.append(new_vert)
                     s.push(new_path)
+        return visited
 
     # def dfs_recursive(self, starting_vertex, destination_vertex, visited=None, path=None):
     #     """
